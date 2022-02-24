@@ -1,38 +1,331 @@
-.App {
-  text-align: center;
+:root {
+  --yellow-color: #feef9f;
+  --orange-color: #fea014;
+  --text-second-color: #d8d8d8;
+  --text-color: #060606;
+  --white-color: #ffffff;
+  --grey-color: #ededed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+.btn {
+  padding: 2px 20px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "Roboto", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  /* background-color: var(--yellow-color); */
+}
+.wrapper {
+  background-color: var(--yellow-color);
+  padding: 20px 24px 0 24px;
+}
+.content {
+  background-color: var(--white-color);
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  padding: 20px 24px 0 24px;
+}
+.content .navigate {
+  display: flex;
+}
+.content .navigate .btn {
+  flex: 1;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.navigate .btn.btn-primary {
+  background: var(--orange-color);
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.navigate .btn.btn-transparent {
+  background: transparent;
+  color: var(--text-second-color);
+}
+.time {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.time .time-btn {
+  margin: 0 12px;
+  font-size: 12px;
+  color: var(--text-second-color);
+  cursor: pointer;
+}
+.time .time-btn.active {
+  color: var(--text-color);
+  border-bottom: solid 1px var(--orange-color);
+}
+.userRanking {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.userRanking img {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 10px;
+}
+
+.userRanking h1 {
+  padding: 0px 0px 12px;
+  font-size: 26px;
+}
+
+.userRanking p::before,
+.userRanking p::after {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  top: 65%;
+  left: 27%;
+}
+.userRanking p::after {
+  top: 65%;
+  left: 60%;
+}
+
+.userRanking .yourRanking img {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  margin-right: 6px;
+  transform: translateY(4px);
+}
+.userRanking .yourRanking {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.userRanking .yourRanking p span {
+  color: var(--orange-color);
+  font-size: 14px;
+}
+.topUser {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 24px;
+  align-items: flex-start;
+}
+.topUser .topUser__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.topUser__item.topUser__item__nth1 {
+  transform: translateY(-30px);
+  flex: 3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.topUser__item.topUser__item__nth1 .rankingImg {
+  width: 86px;
+  height: 86px;
+}
+
+.topUser__item.topUser__item__nth1 p {
+  transform: translateY(18px);
+}
+
+.topUser__item .rankingImg {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: solid 1px var(--text-second-color);
+  padding: 1px;
+}
+.topUser__item .rankingName {
+  padding-top: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-line-clamp: revert;
+  text-align: center;
+}
+.topUser__item .postNumber {
+  color: var(--orange-color);
+  padding: 12px;
+  font-weight: 600;
+}
+
+.topUser__item .ranking-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.topUser__item .postNumber span {
+  color: black;
+  font-size: 12px;
+}
+.wrapperList {
+  background-color: var(--grey-color);
+  padding: 1px 24px 0 24px;
+}
+.listUser__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white-color);
+  padding: 8px 20px;
+  margin: 6px 0px;
+  cursor: pointer;
+}
+
+.listUser__item .detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listUser__item .detail p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.listUser__item .detail p:last-child {
+  color: var(--orange-color);
+  font-size: 10px;
+}
+
+.listUser__item span {
+  color: var(--text-second-color);
+  font-size: 16px;
+}
+
+.listUser__item .left-icon {
+  font-size: 22px;
+  color: var(--text-second-color);
+}
+
+.listUser__item .detail p:last-child span {
+  color: black;
+  font-size: 12px;
+}
+
+.listUser__item .userAvartar {
+  margin: 0 18px;
+}
+
+.listUser__item.currentUser {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--orange-color);
+  width: 480px;
+  transform: translateX(-50%);
+  padding: 8px 44px;
+  z-index: 2;
+}
+.listUser__item.currentUser p:last-child {
+  color: var(--white-color);
+}
+
+.termOfUse {
+  margin-top: 70px;
+}
+.termOfUse .titleTerm {
+  text-align: center;
+  position: relative;
+}
+.termOfUse .titleTerm::before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--text-second-color) transparent;
+  position: absolute;
+  right: 32%;
+  top: -6px;
+  z-index: 1;
+}
+.listTerm {
+  background: var(--white-color);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.listTerm__item {
+  margin-bottom: 16px;
+}
+
+.listTerm__item__point {
+  font-size: 12px;
+}
+
+@media (max-width: 438px) {
+  .navigate .btn.btn-primary {
+    padding: 4px;
+    font-size: 14px;
   }
-  to {
-    transform: rotate(360deg);
+  .navigate .btn.btn.btn-transparent {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .userRanking p::before {
+    width: 34px;
+    left: 23%;
+    top: 66%;
+  }
+  .userRanking p::after {
+    width: 34px;
+    left: 67%;
+    top: 66%;
+  }
+  .listUser__item.currentUser {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .userRanking p::before {
+    left: 18%;
+  }
+
+  .topUser__item.topUser__item__nth1 .rankingImg {
+    width: 66px;
+    height: 66px;
   }
 }
