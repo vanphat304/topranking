@@ -1,0 +1,62 @@
+.listUser__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white-color);
+  padding: 8px 20px;
+  margin: 6px 0px;
+  cursor: pointer;
+}
+
+.listUser__item .detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.listUser__item .detail p:first-child {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.listUser__item .detail p:last-child {
+  color: var(--orange-color);
+  font-size: 10px;
+}
+
+.listUser__item span {
+  color: var(--text-second-color);
+  font-size: 16px;
+}
+
+.listUser__item .left-icon {
+  font-size: 22px;
+  color: var(--text-second-color);
+}
+
+.listUser__item .detail p:last-child span {
+  color: black;
+  font-size: 12px;
+}
+
+.listUser__item .userAvartar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 18px;
+}
+
+.listUser__item.currentUser {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--orange-color);
+  width: 480px;
+  transform: translateX(-50%);
+  padding: 8px 44px;
+  z-index: 2;
+}
+.listUser__item.currentUser p:last-child {
+  color: var(--white-color);
+}

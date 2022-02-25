@@ -1,0 +1,40 @@
+.container {
+  width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  /* background-color: var(--yellow-color); */
+}
+.wrapper {
+  background-color: var(--yellow-color);
+  padding: 20px 24px 0 24px;
+}
+.content {
+  background-color: var(--white-color);
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+  padding: 20px 24px 0 24px;
+}
+.content .navigate {
+  display: flex;
+}
+.content .navigate .btn {
+  flex: 1;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.navigate .btn.btn-primary {
+  background: var(--orange-color);
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+.navigate .btn.btn-transparent {
+  background: transparent;
+  color: var(--text-second-color);
+}

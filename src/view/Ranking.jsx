@@ -5,6 +5,7 @@ import Term from "../component/Term";
 import TopRanking from "../component/TopRanking";
 import WantToGo from "../component/WantToGo";
 import { connect } from "react-redux";
+import "./ranking.css";
 
 class Ranking extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ class Ranking extends Component {
         );
       })
       .catch((err) => {
-        console.log("rrrrrr", err);
+        console.log("errrrrrr", err);
       });
   }
 

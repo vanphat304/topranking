@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
+import "./timeRanking.css";
 class TimeRanking extends Component {
   render() {
     return (

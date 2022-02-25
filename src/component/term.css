@@ -1,0 +1,33 @@
+.termOfUse {
+  margin-top: 70px;
+}
+.termOfUse .titleTerm {
+  text-align: center;
+  position: relative;
+}
+.termOfUse .titleTerm::before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--text-second-color) transparent;
+  position: absolute;
+  right: 32%;
+  top: -6px;
+  z-index: 1;
+}
+.listTerm {
+  background: var(--white-color);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.listTerm__item {
+  margin-bottom: 16px;
+}
+
+.listTerm__item__point {
+  font-size: 12px;
+}

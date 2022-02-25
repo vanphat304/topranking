@@ -1,0 +1,109 @@
+.userRanking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.userRanking img {
+  width: 26px;
+  height: 26px;
+  margin-bottom: 10px;
+}
+
+.userRanking h1 {
+  padding: 0px 0px 12px;
+  font-size: 26px;
+}
+
+.userRanking p::before,
+.userRanking p::after {
+  content: "";
+  display: block;
+  background-color: black;
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  top: 65%;
+  left: 27%;
+}
+.userRanking p::after {
+  top: 65%;
+  left: 60%;
+}
+
+.userRanking .yourRanking img {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
+  margin-right: 6px;
+  transform: translateY(4px);
+}
+.userRanking .yourRanking {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.userRanking .yourRanking p span {
+  color: var(--orange-color);
+  font-size: 14px;
+}
+
+.topUser {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+  align-items: flex-start;
+}
+.topUser .topUser__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.topUser__item.topUser__item__nth1 {
+  transform: translateY(-30px);
+  flex: 3;
+}
+
+.topUser__item.topUser__item__nth1 .rankingImg {
+  width: 86px;
+  height: 86px;
+}
+
+.topUser__item.topUser__item__nth1 p {
+  transform: translateY(18px);
+}
+
+.topUser__item .rankingImg {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: solid 1px var(--text-second-color);
+  padding: 1px;
+}
+.topUser__item .rankingName {
+  padding-top: 12px;
+  font-size: 17px;
+  font-weight: 500;
+  -webkit-line-clamp: revert;
+  text-align: center;
+}
+.topUser__item .postNumber {
+  color: var(--orange-color);
+  padding: 12px;
+  font-weight: 600;
+}
+
+.topUser__item .ranking-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.topUser__item .postNumber span {
+  color: black;
+  font-size: 12px;
+}

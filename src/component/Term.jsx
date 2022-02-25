@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./term.css";
 export default class Term extends Component {
   render() {
     return (

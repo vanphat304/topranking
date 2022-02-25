@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-
 import { connect } from "react-redux";
-
+import "./userRanking.css";
 class UserRanking extends Component {
   render() {
     const { img, name, posts, postTime, id, wanttogo } = this.props.data;
