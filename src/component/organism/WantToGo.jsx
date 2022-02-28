@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import TopUser from "./TopUser";
 import { connect } from "react-redux";
+import TopUser from "./TopUser";
 
 class WantToGo extends Component {
   topWantToGo = [];

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import kingicon from "../img/icon/ranking_gradient.svg";
-import whiteicon from "../img/icon/ranking_white.svg";
-import silverIcon from "../img/icon/icon_score_master_sliver-45.svg";
-import bronzeIcon from "../img/icon/icon_score_master_bronze-45.svg";
+import kingicon from "../../img/icon/ranking_gradient.svg";
+import whiteicon from "../../img/icon/ranking_white.svg";
+import silverIcon from "../../img/icon/icon_score_master_sliver-45.svg";
+import bronzeIcon from "../../img/icon/icon_score_master_bronze-45.svg";
 import { connect } from "react-redux";
-import TimeRanking from "./TimeRanking";
 import "./topUser.css";
-import YourRank from "./YourRank";
-import TopUserItem from "./TopUserItem";
+import YourRank from "../molecules/YourRank";
+import TimeRanking from "../molecules/TimeRanking";
+import TopUserItem from "../atoms/TopUserItem";
 class TopUser extends Component {
   render() {
     let rankings = [];
@@ -21,7 +21,6 @@ class TopUser extends Component {
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
-        console.log("rankings mont 1", rankings);
       } else if (
         this.props.topUser[0].postTime.monthly ==
         this.props.topUser[1].postTime.monthly
@@ -29,7 +28,6 @@ class TopUser extends Component {
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 3, icon: bronzeIcon, css: "" });
-        console.log("rankings mon 2", this.props.topUser, rankings);
       } else if (
         this.props.topUser[1].postTime.monthly ==
         this.props.topUser[2].postTime.monthly
@@ -37,12 +35,10 @@ class TopUser extends Component {
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 2, icon: silverIcon, css: "" });
         rankings.push({ rank: 2, icon: silverIcon, css: "" });
-        console.log("rankings mon 3", this.props.topUser, rankings);
       } else {
         rankings.push({ rank: 1, icon: kingicon, css: " topUser__item__nth1" });
         rankings.push({ rank: 2, icon: silverIcon, css: "" });
         rankings.push({ rank: 3, icon: bronzeIcon, css: "" });
-        console.log("rankings mon 4", this.props.topUser, rankings);
       }
     } else {
       if (this.props.topUser[0].posts == this.props.topUser[2].posts) {

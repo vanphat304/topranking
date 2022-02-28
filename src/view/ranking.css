@@ -18,23 +18,3 @@
 .content .navigate {
   display: flex;
 }
-.content .navigate .btn {
-  flex: 1;
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-weight: 600;
-}
-.navigate .btn.btn-primary {
-  background: var(--orange-color);
-  font-size: 20px;
-  border-radius: 10px;
-  border: none;
-  color: white;
-  font-weight: 600;
-}
-.navigate .btn.btn-transparent {
-  background: transparent;
-  color: var(--text-second-color);
-}

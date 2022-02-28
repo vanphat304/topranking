@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Title from "../atoms/Title";
 import "./term.css";
 export default class Term extends Component {
   render() {
     return (
       <div className="termOfUse">
-        <h1 className="titleTerm">Term of Use</h1>
+        <Title title="Term Of Use" />
         <div className="listTerm">
           <div className="listTerm__item">
             <h5 className="listTerm__item__point">point 1</h5>

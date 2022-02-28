@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { Component } from "react";
-import ListRanking from "../component/ListRanking";
-import Term from "../component/Term";
-import TopRanking from "../component/TopRanking";
-import WantToGo from "../component/WantToGo";
+import ListRanking from "../component/organism/ListRanking";
+import TopRanking from "../component/organism/TopRanking";
+import WantToGo from "../component/organism/WantToGo";
 import { connect } from "react-redux";
 import "./ranking.css";
+import Button from "../component/atoms/Button";
+import Term from "../component/molecules/Term";
 
 class Ranking extends Component {
   componentDidMount() {
@@ -44,26 +45,17 @@ class Ranking extends Component {
         <div className="wrapper">
           <div className="content">
             <div className="navigate">
-              <button
-                onClick={() => {
-                  this.changePostToGo();
-                }}
-                className={
-                  this.state.flag ? "btn btn-primary" : "btn btn-transparent"
-                }
-              >
-                POST
-              </button>
-              <button
-                onClick={() => {
-                  this.changeGoToPost();
-                }}
-                className={
-                  !this.state.flag ? "btn btn-primary" : "btn btn-transparent"
-                }
-              >
-                WANT TO GO
-              </button>
+              <Button
+                action={this.changePostToGo}
+                flag={this.state.flag}
+                text="POST"
+              />
+
+              <Button
+                action={this.changeGoToPost}
+                flag={!this.state.flag}
+                text="Want To Go"
+              />
             </div>
             {this.state.flag ? <TopRanking /> : <WantToGo />}
           </div>
@@ -74,7 +66,6 @@ class Ranking extends Component {
             listUser={this.props.listUser}
             time={this.props.time}
           />
-
           <Term />
         </div>
       </div>
