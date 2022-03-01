@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import UserRanking from "../molecules/UserRanking";
+import UserRanking from "../../molecules/userRanking/UserRanking";
 // import UserRanking from "./UserRanking";
 class ListRanking extends Component {
   render() {

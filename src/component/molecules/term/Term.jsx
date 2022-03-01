@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Title from "../atoms/Title";
+import Title from "../../atoms/title/Title";
 import "./term.css";
 export default class Term extends Component {
   render() {

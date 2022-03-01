@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import kingicon from "../../img/icon/ranking_gradient.svg";
-import whiteicon from "../../img/icon/ranking_white.svg";
+import kingicon from "../../../img/icon/ranking_gradient.svg";
+import whiteicon from "../../../img/icon/ranking_white.svg";
 import { connect } from "react-redux";
 class YourRank extends Component {
   render() {

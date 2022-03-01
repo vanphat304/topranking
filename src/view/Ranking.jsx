@@ -1,12 +1,12 @@
 import axios from "axios";
 import React, { Component } from "react";
-import ListRanking from "../component/organism/ListRanking";
-import TopRanking from "../component/organism/TopRanking";
-import WantToGo from "../component/organism/WantToGo";
+import ListRanking from "../component/organism/listRanking/ListRanking";
+import TopRanking from "../component/organism/topRanking/TopRanking";
+import WantToGo from "../component/organism/wantToGo/WantToGo";
 import { connect } from "react-redux";
 import "./ranking.css";
-import Button from "../component/atoms/Button";
-import Term from "../component/molecules/Term";
+import Button from "../component/atoms/button/Button";
+import Term from "../component/molecules/term/Term";
 
 class Ranking extends Component {
   componentDidMount() {

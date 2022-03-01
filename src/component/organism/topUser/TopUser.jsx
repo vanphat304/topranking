@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import kingicon from "../../img/icon/ranking_gradient.svg";
-import whiteicon from "../../img/icon/ranking_white.svg";
-import silverIcon from "../../img/icon/icon_score_master_sliver-45.svg";
-import bronzeIcon from "../../img/icon/icon_score_master_bronze-45.svg";
+import kingicon from "../../../img/icon/ranking_gradient.svg";
+import whiteicon from "../../../img/icon/ranking_white.svg";
+import silverIcon from "../../../img/icon/icon_score_master_sliver-45.svg";
+import bronzeIcon from "../../../img/icon/icon_score_master_bronze-45.svg";
 import { connect } from "react-redux";
 import "./topUser.css";
-import YourRank from "../molecules/YourRank";
-import TimeRanking from "../molecules/TimeRanking";
-import TopUserItem from "../atoms/TopUserItem";
+import YourRank from "../../molecules/yourRank/YourRank";
+import TimeRanking from "../../molecules/timeRanking/TimeRanking";
+import TopUserItem from "../../atoms/topUserItem/TopUserItem";
 class TopUser extends Component {
   render() {
     let rankings = [];
